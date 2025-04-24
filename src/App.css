@@ -161,19 +161,19 @@ body {
 
 @media (max-width: 480px) {
   .header {
-    font-size: 2rem; /* Reduzindo ainda mais o título */
+    font-size: 1.6rem; /* Reduzindo ainda mais o título */
   }
 
   .team-header {
-    font-size: 2rem; /* Ajustando o tamanho da fonte */
+    font-size: 1.6rem; /* Ajustando o tamanho da fonte */
   }
 
   .team-score {
-    font-size: 2rem; /* Ajustando o tamanho da pontuação */
+    font-size: 1.6rem; /* Ajustando o tamanho da pontuação */
   }
 
   .button {
-    font-size: 1.2rem; /* Menor tamanho de fonte para os botões */
+    font-size: 1.1rem; /* Menor tamanho de fonte para os botões */
     padding: 8px 15px; /* Ajustando o padding */
   }
 
