@@ -1,0 +1,183 @@
+/* Reset geral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(./assets/TrucoFundo.jpg);
+  background-size: cover;
+  background-position: center;
+  animation: fundomechendo 200s infinite linear;
+}
+
+/* Animação do fundo */
+@keyframes fundomechendo {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+/* Container principal */
+.app-container {
+  background: rgba(255, 255, 255, 0.15); /* Fundo transparente */
+  padding: 60px 50px; /* Aumentando o tamanho do padding */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  max-width: 650px; /* Aumentando o tamanho máximo */
+  width: 100%;
+  text-align: center;
+}
+
+/* Título */
+.header {
+  color: #ffffff; /* Texto branco */
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* Estilo para os times */
+.team {
+  background: rgba(255, 255, 255, 0.2); /* Fundo semitransparente */
+  backdrop-filter: blur(8px); /* Efeito de desfoque */
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.team-header {
+  color: #ffffff; /* Cor de texto para o nome do time */
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.team-score {
+  color: #ffffff; /* Cor para o placar */
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* Estilo dos botões */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.button {
+  background-color: transparent; /* Fundo transparente */
+  color: black; /* Cor da fonte preta */
+  border: none; 
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  flex: 1;
+  margin: 0 5px;
+  backdrop-filter: blur(8px); /* Efeito de desfoque */
+}
+
+.button:hover {
+  transform: translateY(-4px); /* Efeito de "salto" para frente */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombras mais intensas */
+}
+
+/* Botão de adicionar (mais) */
+.add {
+  background-color: #ffffff; /* Fundo branco */
+  border-color: #ffffff;
+}
+
+.add:hover {
+  background-color: #ecf0f1; /* Cor de hover mais vibrante */
+}
+
+/* Botão de subtrair (menos) */
+.subtract {
+  background-color: #ffffff; /* Fundo branco */
+  border-color: #ffffff;
+}
+
+.subtract:hover {
+  background-color: #ecf0f1; /* Cor de hover mais vibrante */
+}
+
+/* Botão de truco */
+.truco {
+  background-color: #0fda19; /* Verde vibrante */
+  color: black; /* Texto preto */
+}
+
+.truco:hover {
+  background-color: rgb(0, 255, 13); /* Verde mais intenso no hover */
+  transform: translateY(-4px); /* Efeito de "salto" para frente */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombras mais intensas */
+}
+
+/* Botão de reset */
+.reset-button {
+  background-color: #e67315; /* Laranja vibrante */
+  border: none;
+  border-radius: 8px;
+  color: black; /* Texto preto */
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-top: 25px;
+  backdrop-filter: blur(8px); /* Efeito de desfoque */
+}
+
+.reset-button:hover {
+  background-color: #ff7300; /* Laranja mais vibrante no hover */
+  transform: translateY(-4px); /* Efeito de "salto" para frente */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombras mais intensas */
+}
+
+.scoreTentos {
+  color: #ffd900; /* Amarelo dourado para tentos */
+  font-weight: bold;
+}
+
+.scorePontos {
+  color: #00bfff; /* Azul claro (Deep Sky Blue) para pontos */
+  font-weight: bold;
+}
+
+
+/* Responsividade */
+
+
+@media (max-width: 480px) {
+  .header {
+    font-size: 2rem; /* Reduzindo ainda mais o título */
+  }
+
+  .team-header {
+    font-size: 2rem; /* Ajustando o tamanho da fonte */
+  }
+
+  .team-score {
+    font-size: 2rem; /* Ajustando o tamanho da pontuação */
+  }
+
+  .button {
+    font-size: 1.2rem; /* Menor tamanho de fonte para os botões */
+    padding: 8px 15px; /* Ajustando o padding */
+  }
+
+  .app-container {
+    padding: 20px 15px; /* Reduzindo mais o padding */
+  }
+}
