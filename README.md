@@ -19,10 +19,7 @@ Este é um aplicativo simples feito em **React + Vite** que simula um contador d
 - CSS3 com animações
 - `localStorage` para persistência de dados
 
-## 📦 Instalação
+## 📦 Visualização
 
 ```bash
-git clone https://github.com/seu-usuario/contador-truco.git
-cd contador-truco
-npm install
-npm run dev
+https://contador-truco-ashy.vercel.app
