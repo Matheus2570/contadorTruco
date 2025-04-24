@@ -88,6 +88,7 @@ body {
 }
 
 .add {
+  font-size: 1.5em;
   background-color: #ffffff;
   border-color: #ffffff;
 }
@@ -97,6 +98,7 @@ body {
 }
 
 .subtract {
+  font-size: 1.5em;
   background-color: #ffffff;
   border-color: #ffffff;
 }
