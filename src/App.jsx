@@ -17,22 +17,27 @@ const App = () => {
 
   const atualizarTime = (index, tipo) => {
     setTimes((prev) => {
-      const novosTimes = prev.map((time, i) => {
+      let novosTimes = prev.map((time, i) => {
+        let novosTentos = time.tentos;
         if (i === index) {
-          let novosTentos = time.tentos;
           if (tipo === "adicionar") novosTentos++;
           if (tipo === "subtrair" && time.tentos > 0) novosTentos--;
           if (tipo === "truco") novosTentos += 3;
-
-          if (novosTentos >= 12) {
-            return { ...time, tentos: 0, pontos: time.pontos + 1 };
-          }
-
-          return { ...time, tentos: novosTentos };
         }
-        return time;
+  
+        return { ...time, tentos: novosTentos };
       });
-
+  
+      // Verifica se algum time atingiu 12 tentos
+      const timeVencedorIndex = novosTimes.findIndex((time) => time.tentos >= 12);
+      if (timeVencedorIndex !== -1) {
+        novosTimes = novosTimes.map((time, i) => ({
+          ...time,
+          tentos: 0,
+          pontos: i === timeVencedorIndex ? time.pontos + 1 : time.pontos,
+        }));
+      }
+  
       localStorage.setItem("times", JSON.stringify(novosTimes));
       return novosTimes;
     });
