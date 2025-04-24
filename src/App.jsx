@@ -8,8 +8,8 @@ const App = () => {
       return JSON.parse(dadosSalvos);
     }
     return [
-      { nome: "Vocês (você)", tentos: 0, pontos: 0 },
-      { nome: "Eles (ele)", tentos: 0, pontos: 0 },
+      { nome: "Time 1", tentos: 0, pontos: 0 },
+      { nome: "Time 2", tentos: 0, pontos: 0 },
     ];
   };
 
@@ -40,8 +40,8 @@ const App = () => {
 
   const resetarJogo = () => {
     const novosTimes = [
-      { nome: "Vocês (você)", tentos: 0, pontos: 0 },
-      { nome: "Eles (ele)", tentos: 0, pontos: 0 },
+      { nome: "Time 1", tentos: 0, pontos: 0 },
+      { nome: "Time 2", tentos: 0, pontos: 0 },
     ];
     setTimes(novosTimes);
     localStorage.setItem("times", JSON.stringify(novosTimes));
